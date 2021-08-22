@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 65.2%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  height: 100vh;
+  color: bisque;
+  background-color: lightblue;
+  background-image: linear-gradient(to top left, #722d1777 0%, #92150cb4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  background-color: rgb(129, 11, 21);
+  backdrop-filter: blur(100px);
+  width: 100rem;
+  height: 60rem;
+  filter: blur();
+  box-shadow: 0 5rem 5rem #7a053210;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  height: 50%, 50%;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.name {
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: 90;
+  margin-bottom: 5rem;
+}
+
+.score {
+  font-size: 10rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 200;
+}
+.player--active .score {
+  font-weight: 200;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.btn {
+  position: relative;
+  /* left: 50%; */
+  right: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+/* .btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+} */
+.dice {
+  position: relative;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-roll {
+  top: 50rem;
+  left: 15rem;
+  position: absolute;
+}
+.btn-again {
+  top: 1rem;
+  position: relative;
+  left: 4rem;
+}
+.btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+/* .hidden {
+  display: none;
+} */
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
